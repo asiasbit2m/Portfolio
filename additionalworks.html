@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREX</title>
+    <style>
+        /*  Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo a {
+            font-size: 28px;
+            color: #ff4c4c;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff4c4c;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .product-item {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        .product-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+        .product-details h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ff4c4c;
+        }
+        .product-details p {
+            margin-bottom: 15px;
+            color: #bbbbbb;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .product-details .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff4c4c;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .product-details .btn:hover {
+            background-color: #e43b3b;
+            transform: translateY(-3px);
+        }
+
+        /* Section Titles */
+        h1 {
+            font-size: 36px;
+            color: #ff4c4c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f1f1f;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        footer p {
+            color: #888888;
+            font-size: 14px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header, .filters {
+                padding: 20px;
+            }
+            .search-cart input {
+                width: 150px;
+            }
+            .filters {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .filters .sort {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">Asia</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="Works.html" class="active">Back</a></li>
+                <li><a href="Resume.html">My Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <h1>J-REX</h1>
+
+        <!-- Products Section -->
+        <section class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-item">
+                <img src="pngs/trexgame.png" alt="TREX Game">
+                <div class="product-details">
+                    <h3>J-REX the Dinosaur</h3>
+                    <p>This is J-Rex, the offline dinosaur game. It's one of our first-year college projects. The game is simple: jump over cactus obstacles and beat your highscore.</p>
+                    <a href="trexgame.html" class="btn">Play Now</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-item">
+                <img src="pngs/touristspot.png" alt="Tourist Spot">
+                <div class="product-details">
+                    <h3>Quezon City Tourist Spot</h3>
+                    <p>This is a website project where we listed tourist spots and attractions to visit in Quezon City. Ideal for tourists planning their visit to Metro Manila.</p>
+                    <a href="touristspot.html" class="btn">Explore More</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Asia My Works</p>
+    </footer>
+
+</body>
+</html>
+

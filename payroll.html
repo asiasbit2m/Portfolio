@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREX</title>
+    <style>
+        /*  Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo a {
+            font-size: 28px;
+            color: #ff4c4c;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff4c4c;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .product-item {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        .product-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-details h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ff4c4c;
+        }
+        .product-details p {
+            margin-bottom: 15px;
+            color: #bbbbbb;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .product-details .price {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .product-details .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4c4c;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product-details .btn:hover {
+            background-color: #e43b3b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f1f1f;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        footer p {
+            color: #888888;
+            font-size: 14px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header, .filters {
+                padding: 20px;
+            }
+            .search-cart input {
+                width: 150px;
+            }
+            .filters {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .filters .sort {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">Asia</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="Works.html" class="active">Back</a></li>
+                <li><a href="Resume.html">My Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Products Section -->
+    <section class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img src="pngs/payroll.png" alt="trex">
+            <div class="product-details">
+                <h3>Employee Data Entry</h3>
+                <p>The main form allows users to input employee details, such as name, position, and hours worked. It serves as the starting point for payroll calculations.</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="pngs/payrollcalculate.png" alt="gameovertrex">
+            <div class="product-details">
+                <h3>Payroll Calculation Engine</h3>
+                <p>This section automatically calculates the employee's gross pay, tax deductions, and net pay based on their position and hours worked. It ensures accurate and timely payroll processing.</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="pngs/payrollsummary.png" alt="gameovertrex">
+            <div class="product-details">
+                <h3>Payroll Summary Overview</h3>
+                <p>The summary feature aggregates total gross pay, tax deductions, and net pay for all employees. It provides a quick snapshot of payroll data for efficient tracking and reporting.</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="pngs/payrollexport.png" alt="gameovertrex">
+            <div class="product-details">
+                <h3>Export Payroll Records</h3>
+                <p>The export function enables users to save payroll data and summaries to a text file for easy storage. It simplifies record management and sharing with stakeholders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Asia My Works</p>
+        </div>
+    </footer>
+
+</body>
+</html>
